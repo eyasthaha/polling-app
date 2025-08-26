@@ -10,5 +10,11 @@ class PollOptions extends Model
 
     use SoftDeletes;
 
-    protected $fillable = ['poll_id', 'option'];
+    protected $fillable = ['poll_id', 'option',];
+
+
+    public function votes()
+    {
+        return $this->hasMany(PollVotes::class, 'option_id');
+    }
 }

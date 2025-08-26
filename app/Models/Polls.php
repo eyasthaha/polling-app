@@ -28,4 +28,10 @@ class Polls extends Model
                     'id'
                 )->where('user_id', Auth::id());
     }
+
+    public function votes()
+    {
+        return $this->hasManyThrough(PollVotes::class, PollOptions::class, 'poll_id', 'option_id');
+    }
+
 }

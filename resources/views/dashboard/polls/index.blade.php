@@ -21,7 +21,7 @@
                             @csrf
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>            
-                        <a href="{{}}" class="btn btn-success btn-sm">Result</a>                        
+                        <a href="{{route('polls.results',$polling->id)}}" class="btn btn-success btn-sm">Result</a>                        
                     </div>
                 </li>
             @endforeach
