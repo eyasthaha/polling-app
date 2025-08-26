@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="container mt-4">
-        <h2>Pollings</h2>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Pollings</h2>
+            <a href="{{route('polls.create')}}" class="btn btn-primary">Create</a>
+        </div>
         <ul class="list-group">
             @foreach($polls as $polling)
                 <li class="list-group-item d-flex justify-content-between align-items-center">
