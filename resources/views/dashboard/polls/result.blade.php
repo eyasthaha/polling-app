@@ -4,7 +4,7 @@
     <h2>{{$poll->title}} - Poll Results</h2>
     <p>Results will be displayed here.</p>
     <div class="card">
-        <div class="mx-auto">
+        <div class="mx-auto h-100" style="width: 80%;">
             <canvas id="myChart"></canvas>
         </div>
     </div>
