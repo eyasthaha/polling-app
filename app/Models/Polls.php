@@ -3,11 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 
 class Polls extends Model
 {
-    protected $fillable = ['title', 'description'];
+    use SoftDeletes;
+
+    protected $fillable = ['title', 'description', 'created_at', 'updated_at', 'deleted_at'];
 
     public function options()
     {

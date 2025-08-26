@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('poll_id')->constrained('polls')->onDelete('cascade');
             $table->string('option');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

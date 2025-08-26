@@ -27,4 +27,9 @@ class PollService
         return Polls::with('options','userVote')->findOrFail($pollId);
     }
 
+    public function pollsList()
+    {
+        return Polls::get();
+    }
+
 }

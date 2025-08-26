@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('poll_id');
             $table->unsignedBigInteger('option_id');
             $table->unsignedBigInteger('user_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
